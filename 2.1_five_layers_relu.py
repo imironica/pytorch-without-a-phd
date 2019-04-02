@@ -36,7 +36,6 @@ class Net(nn.Module):
         self.linear4 = nn.Linear(60, 30, bias=True)
         self.linear5 = nn.Linear(30, 10, bias=True)
 
-        '''
 
         torch.nn.init.xavier_uniform(self.linear1.weight)
         torch.nn.init.xavier_uniform(self.linear2.weight)
@@ -45,7 +44,7 @@ class Net(nn.Module):
 
         torch.nn.init.xavier_uniform(self.linear4.weight)
         torch.nn.init.xavier_uniform(self.linear5.weight)
-        '''
+
 
         self.softmax = nn.Softmax(1)
 
@@ -182,5 +181,3 @@ showPerformance(testLoss, testAccuracy, noOfEpochs, losses, accuracies, plot=sho
 showConfusionMatrix(yTest, predictions)
 
 
-# Accuracy obtained:
-# 0.9745

@@ -77,10 +77,12 @@ xTrain, yTrain, xTest, yTest = readDatabase()
 
 # Network parameters
 learningRate = 0.003
-learningRateDecay =  learningRate / 11.
 
 noOfEpochs = 10
 batchSize = 100
+
+learningRateDecay =  learningRate / (noOfEpochs+1.)
+
 
 numberOfClasses = 10
 featureSize = xTrain.shape[1]
